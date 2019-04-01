@@ -59,6 +59,12 @@ h6 {
   border-color: #fff;
 }
 
+.product-name .btn-fill-white {
+  color: #000000;
+  background-color: #fff;
+  border-color: #fff;
+}
+
 .product-intro {
   font-size: 13px;
   padding: 10px 10px 15px 10px;
