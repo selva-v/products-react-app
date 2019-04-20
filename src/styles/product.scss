@@ -40,29 +40,40 @@ h6 {
   color: #fff;
   margin-right: 10px;
 }
-.product img {
-  border-radius: 10px 10px 0 0;
-}
-.product-name {
-  padding: 10px;
-}
-.product-name h4 {
-  width: 70%;
-}
-.product-name .btn {
-  width: 30%;
-}
-.product-name .btn-outline-white {
-  color: #fff;
-  background-color: transparent;
-  background-image: none;
-  border-color: #fff;
+.product {
+  img {
+    border-radius: 10px 10px 0 0;
+  }
 }
 
-.product-name .btn-fill-white {
-  color: #000000;
-  background-color: #fff;
-  border-color: #fff;
+.product-name {
+  padding: 10px;
+  h4 {
+    width: 65%;
+  }
+  .btn {
+    width: 35%;
+    height: 32px;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 5px;
+
+    &.btn-outline-white {
+      color: #fff;
+      background-color: transparent;
+      background-image: none;
+      border-color: #fff;
+    }
+    &.btn-fill-white {
+      color: #000000;
+      background-color: #fff;
+      border-color: #fff;
+    }
+    &:focus,
+    &.focus {
+      box-shadow: none;
+    }
+  }
 }
 
 .product-intro {

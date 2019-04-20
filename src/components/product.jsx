@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../styles/product.css";
+import "../styles/product.scss";
 
 class Products extends Component {
   state = {
@@ -14,7 +14,12 @@ class Products extends Component {
         <img src={this.state.imageUrl} alt="" />
         <div className="product-name clearfix">
           <h4 className="float-left">{this.state.name}</h4>
-          <button className={this.getButtonClasses()} onClick={this.handleClick}>{this.renderButtonText()}</button>
+          <button
+            className={this.getButtonClasses()}
+            onClick={this.handleClick}
+          >
+            {this.renderButtonText()}
+          </button>
         </div>
         <div className="product-intro">{this.state.intro}</div>
       </div>
@@ -22,19 +27,19 @@ class Products extends Component {
   }
 
   handleClick = () => {
-    this.setState({ isToggleOn: !this.state.isToggleOn});
+    this.setState({ isToggleOn: !this.state.isToggleOn });
   };
 
   renderButtonText() {
-    if (this.state.isToggleOn) return 'Selected';
-    return 'Select';
+    if (this.state.isToggleOn) return "Selected";
+    return "Select";
   }
 
   getButtonClasses() {
     let classes = "float-left btn ";
     classes += this.state.isToggleOn ? "btn-fill-white" : "btn-outline-white";
     return classes;
-  };
+  }
 }
 
 export default Products;
